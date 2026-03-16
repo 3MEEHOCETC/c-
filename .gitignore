@@ -1,0 +1,14 @@
+test
+arena_test
+queue_test
+my2f
+alloc
+alloc2
+alloc3
+.o
+.log
+.out
+.vscode
+.idea/
+.vscode/
+.DS_Store
