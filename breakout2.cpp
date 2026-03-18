@@ -39,8 +39,19 @@ ball.x += ball.speedX * deltaTime;
 ball.y += ball.speedY * deltaTime;
 
 //3. отскоки от стен
-if (ball.x + ball.radius >= screenWidth || ball.x - ball.radius <= 0) ball.speedX *= -1;
-if (ball.y - ball.radius <= 0) ball.speedY *= -1;
+if (ball.x + ball.radius >= screenWidth) {
+    ball.x = screenWidth - ball.radius;
+    ball.speedX *= -1;
+}
+if (ball.x - ball.radius <= 0) {
+    ball.x = ball.radius;
+    ball.speedX *= -1;
+}
+//отскок от верха + выталкивание
+if (ball.y - ball.radius <= 0) {
+    ball.y = ball.radius;
+    ball.speedY *= -1;
+}
 
 //4. столкновение мяча с платформой
 if (CheckCollisionCircleRec({ball.x, ball.y}, ball.radius, {paddle.x, paddle.y, paddle.width, paddle.height})) {
@@ -53,13 +64,29 @@ if (CheckCollisionCircleRec({ball.x, ball.y}, ball.radius, {paddle.x, paddle.y, 
         ball.y = paddle.y - ball.radius;
     }
 }
-// если упал - ресет
-if (ball.y + ball.radius >= screenHeight) {
-    ball.x = screenWidth / 2.0f;
-    ball.y = screenHeight / 2.0f;
-    }
-    BeginDrawing();
-    ClearBackground(BLACK);
+// отскок от боковых стенок (лево и право)
+if (ball.x + ball.radius >= screenWidth || ball.x - ball.radius <= 0) {
+    ball.speedX *= -1.0f;
+}
+//движение мяча
+ball.x += ball.speedX;
+ball.y += ball.speedY;
+
+//отскок от верхней стенки
+if (ball.y <= ball.radius)
+{
+    ball.speedY *= -1.0f; //инвертируем скорость по Y
+}
+
+// проигрыш (если упал ниже экрана)
+if (ball.y + ball.radius >= GetScreenHeight()) {
+    ball.x = GetScreenWidth() / 2.0f;
+    ball.y = GetScreenHeight() / 2.0f;
+    //можно обнулить скорость или задать начальную, чтоб мяч не улетал
+}
+
+BeginDrawing();
+ClearBackground(BLACK);
 
     //рисуем платформу
     DrawRectangle(paddle.x, paddle.y, paddle.width, paddle.height, SKYBLUE);
