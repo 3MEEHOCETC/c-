@@ -1,0 +1,3 @@
+/home/zmeehocetc/project/build/CMakeFiles/my_project.dir
+/home/zmeehocetc/project/build/CMakeFiles/edit_cache.dir
+/home/zmeehocetc/project/build/CMakeFiles/rebuild_cache.dir
