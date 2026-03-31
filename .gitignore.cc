@@ -1,0 +1,12 @@
+build/
+bin/
+obj/
+*.exe
+breakout_linux
+breakout
+breakout.exe
+raylib_installer_v5.5/
+raylib/
+.vscode/
+.cache/
+ test
