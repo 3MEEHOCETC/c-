@@ -1,26 +1,14 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+//если делаем через low, high
 
-int main() {
-    srand(static_cast<unsigned int>(time(0)));
-    int secretNumber = rand() % 100 + 1;
-    int tries = 0;
-    int guess;
-    std::cout << "\nWelcome to Guess User Number\n\n";
+int low = 1;
+int high = 100;
+int guess;
+//после каждой попытки комп должен быть ближе
+int main() 
+{
+    if { low = guess + 1}
+    else {high = guess - 1}
 
-    do 
-    { 
-        if (secretNumber < guess)
-    
-    else if (secretNumber > guess)
 
-    else
-    {
-        std::cout << "\nComputer won! Good game!\n";
-
-    }
-} while (secretNumber != guess);
-
-return 0;
 }
