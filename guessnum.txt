@@ -37,3 +37,46 @@ std::cin >> Got it! >> endl;
 
 
 if (x > y) << 
+
+
+1 версия кода 
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+ int main() {
+    srand(static_cast<unsigned int>(time(0)));
+    int secretNumber;
+    int tries = 0;
+    int lower;
+    int higher;
+    int guess = rand() % 100 + 1;;
+    std::cout << "\nWelcome to Guess User Number\n\n";
+
+    do 
+    { 
+        std::cout << "Is it?";
+        std::cin >> lower >> secretNumber > guess;
+        if (secretNumber > guess)
+    
+    else if (secretNumber > guess)
+
+    else
+    {
+        std::cout << "\nComputer won! Good game!\n";
+
+    }
+} while (secretNumber != guess);
+
+return 0;
+}
+
+надо сделать код через low and high
+
+если делаем int low = 1;
+int high = 100;
+int guess;
+то что? надо добавить логику чтобы после каждой попытки комп был ближе:
+if { low = guess + 1}
+else { high = guess - 1}
+
