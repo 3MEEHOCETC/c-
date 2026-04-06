@@ -14,3 +14,13 @@ std::cout << "the character at position 0 is: " << phrase[0] << "\n\n";
 std::cout << "Changing the character at position 0.\n";
 phrase[0] = 'L';
 std::cout << "the phrase is now: " << phrase << "\n\n"; 
+for (unsigned int i = 0; i < phrase.size(); ++i)
+{
+    std::cout << "Character at position " << i << " is: " << phrase[i] << std::endl;
+}
+std::cout << "\nThe sequence 'Over' begins at location" ;
+std::cout << phrase.find("Over") << std::endl;
+if (phrase.find("eggplant") == std::string::npos)
+{
+    std::cout << "'eggplant' is not in the phrase.\n\n";
+}
