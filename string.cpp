@@ -24,3 +24,16 @@ if (phrase.find("eggplant") == std::string::npos)
 {
     std::cout << "'eggplant' is not in the phrase.\n\n";
 }
+phrase.erase(4, 5);
+std::cout << "the phrase is now: " << phrase << std::endl;
+phrase.erase(4);
+std::cout << "The phrase is now: " << phrase << std::endl;
+phrase.erase();
+std::cout << "The phrase is now: " << phrase << std::endl;
+if (phrase.empty())
+{
+    std::cout << "\nThe phrase is no more.\n";
+}
+return 0;
+}
+
