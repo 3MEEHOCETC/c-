@@ -39,7 +39,7 @@ int main()
     std::cout << "Enter 'quit' to quit the game.\n\n";
     std::cout << "The jumble is: " << jumble;
     std::string guess;
-    std::cout << "\n\nYour huess: ";
+    std::cout << "\n\nYour guess: ";
     std::cin >> guess;
 
     while ((guess != theWord) && (guess != "quit"))
