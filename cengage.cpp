@@ -20,7 +20,7 @@ int main() {
     std::cout << "\nYour items:\n";
     for (unsigned int i = 0; i < invertory.size(); ++i)
     {
-std::cout << invertory[i] <<std::endl;
+std::cout << invertory[i] << std::endl;
 }
 std::cout << "\nThe item name '" << invertory[0] << "' has ";
 std::cout << invertory[0].size() << " letters in it.\n";
