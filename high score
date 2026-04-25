@@ -1,3 +1,4 @@
 // Программа High Scores
 // Демонстрирует работу с алгоритмами
 #include<iostream>
+#include<vector>
