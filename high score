@@ -2,3 +2,4 @@
 // Демонстрирует работу с алгоритмами
 #include<iostream>
 #include<vector>
+#include<algorithm>
