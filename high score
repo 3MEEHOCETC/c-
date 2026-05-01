@@ -7,3 +7,4 @@
 #include<cstdlib>
 int main()
 {
+std::vector<int>::const_iterator iter;
