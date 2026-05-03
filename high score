@@ -9,3 +9,4 @@ int main()
 {
 std::vector<int>::const_iterator iter;
 std::cout << "Creating a list of scores";
+std::vector<int> scores;
