@@ -1,0 +1,15 @@
+// Программа High Scores
+// Демонстрирует работу с алгоритмами
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<ctime>
+#include<cstdlib>
+int main()
+{
+std::vector<int>::const_iterator iter;
+std::cout << "Creating a list of scores";
+std::vector<int> scores;
+scores.push_back(1500);
+scores.push_back(3500);
+scores.push_back(7500);
