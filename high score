@@ -13,3 +13,4 @@ std::vector<int> scores;
 scores.push_back(1500);
 scores.push_back(3500);
 scores.push_back(7500);
+std::cout << "\nHigh scores:\n";
