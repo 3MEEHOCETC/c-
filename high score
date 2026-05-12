@@ -1,3 +1,4 @@
+
 // Программа High Scores
 // Демонстрирует работу с алгоритмами
 #include<iostream>
@@ -16,3 +17,7 @@ scores.push_back(7500);
 std::cout << "\nHigh scores:\n";
 for (iter = scores.begin(); iter != scores.end; ++iter);
 {
+std::cout << *iter << std::endl;
+}
+std::cout << "\nFinding a score.";
+
