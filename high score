@@ -22,3 +22,5 @@ std::cout << *iter << std::endl;
 std::cout << "\nFinding a score.";
 int score;
 std::cout << "\nEnter a score to find: ";
+std::cin >> score;
+iter = find(scores.begin(), scores.end(), score);
