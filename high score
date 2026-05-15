@@ -24,3 +24,6 @@ int score;
 std::cout << "\nEnter a score to find: ";
 std::cin >> score;
 iter = find(scores.begin(), scores.end(), score);
+if (iter != scores.end())
+{
+std::cout << "Score found.\n";
