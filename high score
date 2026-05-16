@@ -27,3 +27,7 @@ iter = find(scores.begin(), scores.end(), score);
 if (iter != scores.end())
 {
 std::cout << "Score found.\n";
+}
+else
+{
+std::cout << "Score not found";
