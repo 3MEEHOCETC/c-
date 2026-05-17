@@ -31,3 +31,5 @@ std::cout << "Score found.\n";
 else
 {
 std::cout << "Score not found";
+}
+std::cout << "\nRandomizing scores.";
