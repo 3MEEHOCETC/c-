@@ -33,3 +33,4 @@ else
 std::cout << "Score not found";
 }
 std::cout << "\nRandomizing scores.";
+srand(static_cast<unsigned int>(time(0)));
