@@ -36,3 +36,4 @@ std::cout << "\nRandomizing scores.";
 srand(static_cast<unsigned int>(time(0)));
 random_shuffle(scores.begin(), scores.end());
 std::cout << "\nHigh scores:\n";
+for (iter = scores.begin(); iter != scores.end(); ++iter)
