@@ -42,4 +42,5 @@ std::cout << *iter << std:endl;
 }
 std::cout << "\nSorting scores.";
 sort(scores.begin(), scores.end());
+std::cout << "\nHigh Scores:\n";
 std::cout << *iter << std::endl;
