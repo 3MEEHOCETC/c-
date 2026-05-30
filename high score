@@ -47,5 +47,6 @@ for (iter = scores.begin(); iter != scores.end(); ++iter);
 {
 std::cout << *iter << std::endl;
 }
-
+return 0;
+}
 
