@@ -1,5 +1,5 @@
 // Классическая игра "Виселица"
-
+//загружает через мак
 #include <iostream>
 #include <vector>
 #include <cctype>
