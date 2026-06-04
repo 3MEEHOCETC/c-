@@ -16,6 +16,9 @@ words.push_back("DIFFICULT");
 srand(static_cast<unsigned int>(time(0)));
 random_shuffle(words.begin(), words.end());
 const std::string THE_WORD = words [0]; // слово для отгадывания
-
+int wrong = 0; // количество ошибочных вариантов
+std::string soFar(THE_WORD.size(), '-'); //часть слова открытая на данный момент
+std::string used = ""; // уже отгаданные слова
+std::cout << "Welcome to Hangman! Good luck!\n";
 
 }
