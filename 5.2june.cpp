@@ -1,6 +1,7 @@
 #include <iostream>
 
-int getUserValue()
+long long getUserValue() //int is. only for 32 bit and 2 147 483 647
+//so i changed int for long long
 {
     std::cout << "Enter a integer: ";
     int x;
@@ -8,8 +9,8 @@ int getUserValue()
     return x;
 }
 int main() {
-    int a = getUserValue();
-    int b = getUserValue();
+    long a = getUserValue();
+    long b = getUserValue();
     std::cout << a << " * " << b << " = " << a * b << std::endl;
 return 0;
 }
