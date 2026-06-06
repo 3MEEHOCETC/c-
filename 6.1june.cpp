@@ -1,12 +1,14 @@
 #include <iostream>
 
-int main()
-{
-    int boo() //функция внутри функции
+int boo() //функция внутри функции
     {
         std::cout << "boo!";
         return 0;
     }
+    
+
+int main()
+{
     boo();
     return 0;
 }
