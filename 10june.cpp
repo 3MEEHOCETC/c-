@@ -8,9 +8,9 @@ int main()
     int num{ };
     std::cin >> num; 
     
-    num = num * 2;
+    int doublenum{ num * 2};
 
-    std::cout << "Your doubled number is:" << num << std::endl;
+    std::cout << "Your doubled number is:" << doublenum << std::endl;
     
 
     return 0;
