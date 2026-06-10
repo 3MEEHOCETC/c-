@@ -1,6 +1,6 @@
 #include <iostream>
 
-//preferred ver
+//triple version
 int main()
 {
     std::cout << "Enter a integer: ";
@@ -9,6 +9,7 @@ int main()
     std::cin >> num; 
 
     std::cout << "Your doubled number is:" << num * 2 << std::endl;
+    std::cout << "Your tripled number is: "  << num * 3 << std::endl;
     
 
     return 0;
