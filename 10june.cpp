@@ -1,16 +1,14 @@
 #include <iostream>
 
-//good ver
+//preferred ver
 int main()
 {
     std::cout << "Enter a integer: ";
 
     int num{ };
     std::cin >> num; 
-    
-    int doublenum{ num * 2};
 
-    std::cout << "Your doubled number is:" << doublenum << std::endl;
+    std::cout << "Your doubled number is:" << num * 2 << std::endl;
     
 
     return 0;
