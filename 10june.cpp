@@ -1,6 +1,6 @@
 #include <iostream>
 
-//worst version
+//good ver
 int main()
 {
     std::cout << "Enter a integer: ";
