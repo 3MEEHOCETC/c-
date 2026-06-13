@@ -2,10 +2,10 @@
 
 #include <iostream>
 
-int getValueFromUser()                  // this function now returns an integer value instead void
+float getValueFromUser()                  // this function now returns an integer value instead void
 {
     std::cout << "Enter an integer: ";
-    int input{};
+    float input{};
     std::cin >> input;
 
     return input;                      // return the value the user entered back to the caller 
@@ -15,7 +15,7 @@ int main()
 {
     // Ask user for input
 
-    int num { getValueFromUser() };    // initialize num with the return value of getValueFromUser()
+    float num { getValueFromUser() };    // initialize num with the return value of getValueFromUser()
 
     std::cout << num << " doubled is: " << num * 2 << '\n';
 
