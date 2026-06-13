@@ -1,5 +1,3 @@
-// This programm doesn't work
-
 #include <iostream>
 
 float getValueFromUser()                  // this function now returns an integer value instead void
