@@ -2,20 +2,22 @@
 
 #include <iostream>
 
-void getValueFromUser()
+int getValueFromUser()                  // this function now returns an integer value instead void
 {
     std::cout << "Enter an integer: ";
     int input{};
     std::cin >> input;
+
+    return input;                      // return the value the user entered back to the caller 
 }
 
 int main()
 {
-    getValueFromUser(); // Ask user for input
+    // Ask user for input
 
-    int num{}; 
+    int num { getValueFromUser() };    // initialize num with the return value of getValueFromUser()
 
-    std::cout << num << " double is: " << num * 2 << '\n';
+    std::cout << num << " doubled is: " << num * 2 << '\n';
 
     return 0;
 }
