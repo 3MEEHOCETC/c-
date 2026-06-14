@@ -6,6 +6,8 @@ void printHi()
     std::cout << "Hi!" << '\n';
 
     // This function does not to return a value so no return statement is needed
+    return; // tell compiler to return to the caller - this is redundant since the return will happen at the end of the function anyway
+           // function will return to caller here
 }
 
 int main()
