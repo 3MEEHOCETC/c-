@@ -16,5 +16,5 @@ int main()
     printA();
     printB();
 
-    return 0;
+    return 0; //need to reissue troubles
 }
