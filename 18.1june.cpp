@@ -11,9 +11,8 @@ int getUserValue()
 
 // This function won't compile
 
-void printDouble()
+void printDouble(int num) // This function now has an integer parameter
 {
-    int num{}; // i added this line
     std::cout << num << " doubled is: " << num * 2 << '\n';
 }
 
@@ -21,7 +20,7 @@ int main()
 {
     int num { getUserValue() };
 
-    printDouble();
+    printDouble(num);
 
     return 0;
 }
