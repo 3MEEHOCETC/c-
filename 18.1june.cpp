@@ -13,6 +13,7 @@ int getUserValue()
 
 void printDouble()
 {
+    int num{}; // i added this line
     std::cout << num << " doubled is: " << num * 2 << '\n';
 }
 
