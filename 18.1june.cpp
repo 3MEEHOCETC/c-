@@ -18,9 +18,7 @@ void printDouble(int value) // This function now has an integer parameter
 
 int main()
 {
-    int num { getUserValue() };
-
-    printDouble(num);
+    printDouble(getUserValue());
 
     return 0;
 }
