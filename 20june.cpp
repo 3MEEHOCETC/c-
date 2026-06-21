@@ -1,5 +1,6 @@
 #include <iostream>
 
+// x is not in scope anywhere in this function
 void doSomething()
 {
     std::cout << "Hello!\n";
@@ -7,9 +8,11 @@ void doSomething()
 
 int main()
 {
-    int x{0}; // x's lifetime begins here
+    // x can not used here beacuse it's not in the scope yet
 
-    doSomething(); // x is still alive during this function call 
+    int x{0}; // x enters scope here and can now be used within this function 
+
+    doSomething(); 
 
     return 0;
-} // x's lifetime ends here
+} // x goes out of scope here and can no longer be used
