@@ -1,4 +1,5 @@
 #include <iostream>
+
 void doSomething()
 {
     #ifdef PRINT

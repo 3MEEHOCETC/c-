@@ -1,5 +1,6 @@
 #include <iostream>
 #include "function.cpp"
+
 void doSomething(); // forward declaration for function doSomething()
 
 #define PRINT
