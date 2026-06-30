@@ -31,7 +31,8 @@ int main()
 {
     int x {readNumber()};
     int y {readNumber()};
-    writeAnswer();
+    void writeAnswer();
+    std::cout << "The sum of 2 integers: " << x + y << '\n';
 
     return 0;
 }
