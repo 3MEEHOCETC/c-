@@ -11,7 +11,7 @@
 
 int readNumber();
 
-void writeAnswer();
+void writeAnswer(int x);
 
 int main()
 {
