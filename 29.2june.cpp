@@ -18,20 +18,16 @@ int readNumber()
     return input;
 }
 
-void writeAnswwer()
+void writeAnswer(int x)
 {
-    int x { readNumber() };
-    int y { readNumber() };
-    
-
-    std::cout << x << " x + y " << y  <<   x + y  << '\n';
+    std::cout << x << " x + y "  << x << '\n';
 }
 
 int main()
 {
     int x {readNumber()};
     int y {readNumber()};
-    void writeAnswer();
+    writeAnswer(x + y);
     std::cout << "The sum of 2 integers: " << x + y << '\n';
 
     return 0;
