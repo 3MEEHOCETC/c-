@@ -28,7 +28,5 @@ int main()
     int x {readNumber()};
     int y {readNumber()};
     writeAnswer(x + y);
-    std::cout << "The sum of 2 integers: " << x + y << '\n';
-
     return 0;
 }
