@@ -20,7 +20,7 @@ int readNumber()
 
 void writeAnswer(int x)
 {
-    std::cout << x << " x + y "  << x << '\n';
+    std::cout << "The sum of 2 is: "  << x << '\n';
 }
 
 int main()
