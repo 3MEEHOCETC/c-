@@ -10,7 +10,7 @@ int main()
     // clang-format off
     std::cerr << "main() called\n";
     // clang-format on
-    std::cout << getValue << '\n';
+    std::cout << getValue() << '\n'; // added parenthesis
 
     return 0;
 }
