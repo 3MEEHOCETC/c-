@@ -21,9 +21,12 @@ int getUserInput()
 int main()
 {
     int x{ getUserInput() };
+    std::cerr << "main::x = " << x << '\n';
     int y{ getUserInput() };
+    std::cerr << "main::y = " << y << '\n';
 
     int z{ add(x, 5) };
+    std::cerr << "main::z = " << z << '\n';
     printResult(z);
 
     return 0;
