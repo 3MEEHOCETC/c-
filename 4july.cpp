@@ -9,3 +9,22 @@ void printResult(int z)
 {
     std::cout << "The answer is: " << z << '\n';
 }
+
+int getUserInput()
+{
+    std::cout << "Enter a number: ";
+    int x{};
+    std::cin >> x;
+    return x;
+}
+
+int main()
+{
+    int x{ getUserInput() };
+    int y{ getUserInput() };
+
+    int z{ add(x, 5) };
+    printResult(z);
+
+    return 0;
+}
