@@ -2,6 +2,7 @@
 
 int add(int f, int g)
 {
+    std::cerr << " add() called (f=" << f << ", g=" << g << ")\n ";
     return f + g;
 }
 
