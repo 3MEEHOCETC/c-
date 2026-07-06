@@ -5,17 +5,28 @@ int add(int f, int g)
     std::cerr << " add() called (f=" << f << ", g=" << g << ")\n ";
     return f + g;
 }
+// add(int f, int g)
+// std::cerr << " add() called (f=" << f << ", g=" << g << ")\n";
+//add(int r, int t)
+//std::cerr << "add() called (r=" << r << ", t=" << t << ")\n";
 
 void printResult(int h)
 {
+    //void printNum(int r)
+    //std::cerr << " printNum() called (r=" << r << ")\n";
+    //void textNum(int u)
+    //std::cerr << " textNum called (u=" << u << ")\n";
+    std::cerr << "printResult() called (h=" << h << ")\n";
     std::cout << "The answer is: " << h << '\n';
 }
 
 int maxInput()
 {
+    std::cerr << "maxInput() called\n";
     std::cout << "Enter a value: ";
     int f{};
     std::cin >> f;
+    std::cerr << " maxInput::f = " << f << '\n'; 
     return --f;
 }
 
