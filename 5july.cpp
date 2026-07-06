@@ -18,7 +18,9 @@ int getUserInput()
     std::cout << "Enter a number: ";
     int x{};
     std::cin >> x;
+    std::cerr << "getUserInput::x =" << x << '\n'; // added this additional line of debugging
     return --x;
+    
 }
 
 int main()
