@@ -27,7 +27,7 @@ int maxInput()
     int f{};
     std::cin >> f;
     std::cerr << " maxInput::f = " << f << '\n'; 
-    return --f;
+    return f;
 }
 
 int main()
