@@ -32,12 +32,14 @@ int maxInput()
 
 int main()
 {
-    std::cerr << "main() called\n';"
+    std::cerr << "main() called\n";
     int f{ maxInput() };
-    std::cerr << "main::f= " << f << '\n';
+    std::cerr << "main::f = " << f << '\n';
     int g{ maxInput() };
-
+    std::cerr << "main::g = " << g << '\n';
+    
     int h{ add(f, g) };
+    std::cerr << "main::h = " << h << '\n';
     printResult(h);
 
     return 0;
