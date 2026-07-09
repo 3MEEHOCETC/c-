@@ -1,8 +1,12 @@
 #include <iostream>
 
+#define ENABLE_DEBUG // comment out to disable debugging
+
 int getUserInput()
 {
-    std::cerr << "getUserInput() called\n";
+#ifdef ENABLE_DEBUG
+std::cerr << "getUserInput() called\n";
+#endif
     std::cout << "Enter a number: ";
     int x{};
     std::cin >> x;
@@ -11,8 +15,10 @@ int getUserInput()
 
 int main()
 {
-    std::cerr << "main() called\n";
-    int x{ getUserInput() };
+#ifdef ENABLE_DEBUG
+std::cerr << "main() called\n";
+#endif
+ int x{ getUserInput() };
     std::cout << "You entered: " << x << '\n';
 
     return 0;
