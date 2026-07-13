@@ -12,3 +12,4 @@ int main()
     return 0;
 }// the debugger works by himself
 // 2 days fuckin debagger
+//3 days sof debugging
