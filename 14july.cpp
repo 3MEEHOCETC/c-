@@ -4,7 +4,8 @@ void printValue(int value)
 {
     std::cout << value << '\n';
 }
-//learning to continue
+//learning to continue 
+//today without coding - god bless me
 int main()
 {
     printValue(5);
