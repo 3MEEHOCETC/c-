@@ -19,5 +19,5 @@ int main()
     x = x + readNumber(x);
     writeAnswer(x);
 
-    return 0;
+    return 0; //сегодня чот не в духе я
 }
