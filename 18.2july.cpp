@@ -16,7 +16,7 @@ void writeAnswer(int x)
 int main()
 {
     int x {};
-    readNumber();
+    readNumber(); //тут почему-то считывает и принимает ноль как значение
     x = x + readNumber();
     writeAnswer(x);
 
