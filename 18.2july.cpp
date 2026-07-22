@@ -15,9 +15,7 @@ void writeAnswer(int x)
 
 int main()
 {
-    int x {};
-    readNumber(); //тут почему-то считывает и принимает ноль как значение
-    // купил стол и теперь могу лежа работать
+    int x { readNumber() };
     x = x + readNumber();
     writeAnswer(x);
 
