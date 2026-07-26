@@ -84,7 +84,80 @@ while (!WindowShouldClose() {
         if (ball.position.x - ball.radius <= 0 || 
         ball.position.x + ball.radius >= screenWidth) {
             ball.speed.x *= -1; // разворот по горизонтали
-        })
+        }
+    if (ball.position.y - ball.radius <= 0)
+    {
+        ball.speed.y *= -1; // разворот от потолка
+    }
+    // Мяч упал ниже экрана = проигрыш
+    if (ball.position.y - ball.radius > screenHeight) {
+        gameOver = true;
+    }
+
+    // Столкновение мяча с ракеткой
+    if (CheckCollisionCircleRec(ball.position, ball.radius, paddle.rect)) {
+        if (ball.speed.y > 0) { //только если мяч летит вниз
+            ball.speed.y *= -1;
+        }
+    }
+    // столкновение с кирпичами
+    int aliveCount = 0;
+    for (int r = 0; r < rows; r++) {
+        for (int c = 0; c < cols; c++) {
+            // & берем ссылку на кирпич, а не копию
+            // Меняем b.alive - меняется настоящий кирпич в массиве
+            Brick& b = bricks[r][c];
+            if (!b.alive) continue;
+
+            aliveCount++;
+            if (CheckCollisionCircleRec(ball.position, ball.radius, b.rect)) {
+                b.alive = false;
+                ball.speed.y *= -1;
+                score += 10;
+                aliveCount--;
+            }
+        }
+    }
+    if (aliveCount == 0) won = true;
+} else {
+    // рестарт по пробелу
+    if (IsKeyPressed(KEY_SPACE)) {
+        ball.position = { screenWidth / 2.0f, screenHeight / 2.0f };
+        ball.speed = { 250.0f, -250.0f };
+        paddle.rect.x = screenWidth / 2.0f - 50;
+        for (int r = 0; r < rows; r++)
+        for (int c = 0; c < cols; c++)
+        bricks[r][c].alive = true;
+        score = 0;
+        gameOver = false;
+        won = false;
+    }
+}
+
+// отрисовка
+BeginDrawing();
+ClearBackground(BLACK);
+
+// кирпичи
+for (int r =0; r < rows; r++) {
+    for (int c =0; c < cols; c++) {
+        if (bricks[r][c].alive) {
+            drawRectangleRec(bricks[r][c].rect, SKYBLUE);
+            DrawRectangleLinesEx(bricks[r][c].rect, 1, DARKBLUE);
+        }
+    }
+}
+DrawRectangleRec(paddle.rect, RAYWHITE);
+DrawCircleV(ball.position, ball.radius, RED);
+DrawText(TextFormat("Score: %d", score), 10, 10, 20, RAYWHITE);
+if (gameOver)
+DrawText("GAME OVER - press SPACE", 230, 300, 24, RED);
+if (won)
+DrawText("YOU WIN - press SPACE", 250, 300, 24, GREEN);
+EndDrawing();
+CloseWindow();
+return 0;
+    )
     }                           
 })
 }
