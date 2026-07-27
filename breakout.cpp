@@ -1,4 +1,5 @@
 #include "raylib.h"
+
 // - Структуры. В с++ struct - это способ склеить несколько 
 // переменных в один "тип". Мяч это позиция + скорость + радиус
 struct Ball{
@@ -35,6 +36,7 @@ int main()
     Paddle paddle;
     paddle.rect = { screenWidth / 2.0f - 50, screenHeight - 40, 100, 15 };
     paddle.speed = 450.0f;
+
 // кирпичи: сетка 8 колонок х 5 рядов
 const int cols = 8;
 const int row = 5;
@@ -62,14 +64,14 @@ bool gameOver = false;
 bool won = false;
 
 // Главный цикл. Крутится каждый кадр, пока окно открыто.
-while (!WindowShouldClose() {
+while (!WindowShouldClose()) {
     float dt = GetFrameTime(); // сколько секунд прошло с прошлого кадра.
                                // умножаем скорости на dt, чтобы движение не зависело 
                                // от частоты кадров.
     if (!gameOver && !won) {
         // Управление ракеткой
         if (IsKeyDown(KEY_LEFT)) paddle.rect.x -= paddle.speed * dt;
-        if (IsKeyDown(KEY_RIGHT)) paddle.rect += paddle.speed * dt;
+        if (IsKeyDown(KEY_RIGHT)) paddle.rect.x += paddle.speed * dt;
 
         //  не даём ракетке уехать за экран
         if (paddle.rect.x < 0) paddle.rect.x = 0;
@@ -142,7 +144,7 @@ ClearBackground(BLACK);
 for (int r =0; r < rows; r++) {
     for (int c =0; c < cols; c++) {
         if (bricks[r][c].alive) {
-            drawRectangleRec(bricks[r][c].rect, SKYBLUE);
+            DrawRectangleRec(bricks[r][c].rect, SKYBLUE);
             DrawRectangleLinesEx(bricks[r][c].rect, 1, DARKBLUE);
         }
     }
@@ -155,9 +157,8 @@ DrawText("GAME OVER - press SPACE", 230, 300, 24, RED);
 if (won)
 DrawText("YOU WIN - press SPACE", 250, 300, 24, GREEN);
 EndDrawing();
+}
 CloseWindow();
 return 0;
-    )
+    
     }                           
-})
-}
