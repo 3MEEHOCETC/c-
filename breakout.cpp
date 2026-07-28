@@ -2,12 +2,25 @@
 
 // - Структуры. В с++ struct - это способ склеить несколько 
 // переменных в один "тип". Мяч это позиция + скорость + радиус
-struct Ball{
-    Vector2 position; // vector2 - встроенный в raylib тип с полями .x и .y
-    Vector2 speed;
-    float radius;
+struct Ball{           //встроенный в raylib тип с именем Ball
+    Vector2 position; // поле: позиция - vector2 - готовый тип raylib с полями .x, .y. position = vector2 = position.x position.y
+    Vector2 speed;   // поле: скорость
+    float radius;   // поле радиус
 };
 
+//Ball ball; - создал переменную типа Ball
+//ball.radius = 8.0f; - "." - залезть внутрь и взять это поле
+//ball.position.x = 400; - цепочка точек - у ball берем position, у него берем x
+//ball.speed.y = -250;
+
+// иначе мяч был бы расписан так:
+// float ballX, ballY; - позиция
+// float ballSpeedX, ballSpeedY; - скорость
+// float ballRadius; - радиус
+
+
+//bricks[r][c].alive - лезем в массиы по номерам строки и колонки, достаем кирпич, берем у него alive
+//b.alive - у нас уже есть кирпич в руках (в b), сразу берем alive
 struct Paddle {
     Rectangle rect; // Rectangle - тип raylib .x .y .width .height
     float speed;
