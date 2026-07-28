@@ -39,7 +39,7 @@ int main()
 
 // кирпичи: сетка 8 колонок х 5 рядов
 const int cols = 8;
-const int row = 5;
+const int rows = 5;
 const int brickW = 90;
 const int brickH = 25;
 const int gap = 6;
