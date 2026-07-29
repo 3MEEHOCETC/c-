@@ -36,7 +36,7 @@ int main()
     const int screenWidth = 800;
     const int screenHeight = 600;
 
-    InitWindow(screenWidth, screenHeight, "Breakout");
+    InitWindow(screenWidth, screenHeight, "Breakout"); //InitWindow - функция raylib которая создает окно, "breakout" - заголовк окна, H/W - высота/ширина
     SetTargetFPS(60); // 60 кадров в секунду
 
     // Инициализация мяча
@@ -60,8 +60,8 @@ const int offsetX = 20;
 const int offsetY = 50;
 
 Brick bricks[rows][cols]; // двумерный массив кирпичей
-for (int r = 0; r < rows; r++) {
-    for (int c = 0; c < cols; c++) {
+for (int r = 0; r < rows; r++) {        //r = ряд: 0, 1, 2, 3, 4
+    for (int c = 0; c < cols; c++) {.  //c = колонка: 0, 1, 2, 3, 4
         bricks[r][c].rect = {
             (float)(offsetX + c * (brickW + gap)),
             (float)(offsetY + r * (brickH + gap)),
