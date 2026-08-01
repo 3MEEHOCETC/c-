@@ -81,7 +81,8 @@ while (!WindowShouldClose()) { // while - повторяй тело пока у�
     float dt = GetFrameTime(); // сколько секунд прошло с прошлого кадра. // dt - сколько секунд занял прошлый кадр
                                // умножаем скорости на dt, чтобы движение не зависело 
                                // от частоты кадров.
-    if (!gameOver && !won) {
+                               // 
+    if (!gameOver && !won) {. // вместе - не проиграл и не выиграл
         // Управление ракеткой
         if (IsKeyDown(KEY_LEFT)) paddle.rect.x -= paddle.speed * dt;
         if (IsKeyDown(KEY_RIGHT)) paddle.rect.x += paddle.speed * dt;
