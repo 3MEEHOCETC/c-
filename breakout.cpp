@@ -84,7 +84,7 @@ while (!WindowShouldClose()) { // while - повторяй тело пока у�
                                // 
     if (!gameOver && !won) {. // вместе - не проиграл и не выиграл
         // Управление ракеткой
-        if (IsKeyDown(KEY_LEFT)) paddle.rect.x -= paddle.speed * dt;
+        if (IsKeyDown(KEY_LEFT)) paddle.rect.x -= paddle.speed * dt; // вопрос - клавиша влево сейчас зажата?
         if (IsKeyDown(KEY_RIGHT)) paddle.rect.x += paddle.speed * dt;
 
         //  не даём ракетке уехать за экран
