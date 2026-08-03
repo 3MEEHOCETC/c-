@@ -86,7 +86,7 @@ while (!WindowShouldClose()) { // while - повторяй тело пока у�
         // Управление ракеткой
         if (IsKeyDown(KEY_LEFT)) paddle.rect.x -= paddle.speed * dt; // вопрос - клавиша влево сейчас зажата?
         if (IsKeyDown(KEY_RIGHT)) paddle.rect.x += paddle.speed * dt;
-
+//paddle.rect.x - координата ракетки по горизонтали
         //  не даём ракетке уехать за экран
         if (paddle.rect.x < 0) paddle.rect.x = 0;
         if (paddle.rect.x + paddle.rect.width > screenWidth)
