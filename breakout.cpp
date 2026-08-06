@@ -89,6 +89,7 @@ while (!WindowShouldClose()) { // while - повторяй тело пока у�
 //paddle.rect.x - координата ракетки по горизонтали
         //  не даём ракетке уехать за экран
         // += вправо, зеркально, седня купил байк
+        // крайний рывок
         if (paddle.rect.x < 0) paddle.rect.x = 0;
         if (paddle.rect.x + paddle.rect.width > screenWidth)
         paddle.rect.x = screenWidth - paddle.rect.width;
