@@ -91,6 +91,7 @@ while (!WindowShouldClose()) { // while - повторяй тело пока у�
         // += вправо, зеркально, седня купил байк
         // крайний рывок
         //сдал на права, круто
+        //dt делает скорость честной на лбьом железе
         if (paddle.rect.x < 0) paddle.rect.x = 0;
         if (paddle.rect.x + paddle.rect.width > screenWidth)
         paddle.rect.x = screenWidth - paddle.rect.width;
