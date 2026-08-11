@@ -94,6 +94,7 @@ while (!WindowShouldClose()) { // while - повторяй тело пока у�
         //dt делает скорость честной на лбьом железе
         //я не купил мотоджинсы - без них защита колен только колени спасет
         //changed my location
+        //today wtht new lines
         if (paddle.rect.x < 0) paddle.rect.x = 0;
         if (paddle.rect.x + paddle.rect.width > screenWidth)
         paddle.rect.x = screenWidth - paddle.rect.width;
