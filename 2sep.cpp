@@ -10,4 +10,5 @@ int main()
     std::cout << "The value is zero\n";
 
     return 0;
+    //today without light coding
 }
